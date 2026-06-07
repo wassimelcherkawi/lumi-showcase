@@ -112,7 +112,11 @@ export const updateVideo = createServerFn({ method: "POST" })
   .handler(async ({ context, data }) => {
     await assertIsAdmin(context.userId);
     const admin = await getAdmin();
-    const patch: Record<string, unknown> = {};
+    const patch: {
+      title?: string;
+      description?: string | null;
+      is_published?: boolean;
+    } = {};
     if (data.title !== undefined) patch.title = data.title;
     if (data.description !== undefined) patch.description = data.description;
     if (data.isPublished !== undefined) patch.is_published = data.isPublished;
