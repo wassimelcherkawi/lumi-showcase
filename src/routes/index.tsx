@@ -48,10 +48,10 @@ function Hero() {
           <span className="text-muted-foreground">منصة الفيديوهات التسويقية الأولى</span>
         </div>
         <h1 className="mt-6 text-5xl md:text-7xl font-black leading-tight animate-fade-up" style={{ animationDelay: "0.1s" }}>
-          شاهد. <span className="gradient-text">تعلّم.</span> سجّل.
+          شاهد. <span className="gradient-text">فكّر في اختيارك.</span> سجّل.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.2s" }}>
-          مجموعة من الفيديوهات التسويقية الحصرية مع إمكانية التسجيل المباشر للحصول على عروضنا.
+          {"\n"}
         </p>
         <div className="mt-8 flex justify-center gap-3 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <Button asChild className="gradient-bg text-white h-12 px-6 glow-shadow text-base">
