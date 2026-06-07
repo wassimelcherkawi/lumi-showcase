@@ -95,7 +95,7 @@ function VideosSection() {
                   poster={v.thumbnail_url ?? undefined}
                   controls
                   preload="metadata"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <div className="p-5">
