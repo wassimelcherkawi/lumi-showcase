@@ -32,8 +32,8 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
 import { toast } from "sonner";
-import { Download, LogOut, Trash2, Upload, Video as VideoIcon } from "lucide-react";
-import { useNavigate } from "@tanstack/react-router";
+import { Download, Home, LogOut, Trash2, Upload, Video as VideoIcon } from "lucide-react";
+import { Link, useNavigate } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/_authenticated/admin")({
   component: AdminPage,
@@ -82,10 +82,18 @@ function AdminPage() {
           <h1 className="text-2xl font-bold bg-gradient-to-l from-primary to-accent bg-clip-text text-transparent">
             لوحة التحكم
           </h1>
-          <Button variant="ghost" size="sm" onClick={handleSignOut}>
-            <LogOut className="ms-2 h-4 w-4" />
-            تسجيل الخروج
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/">
+                <Home className="ms-2 h-4 w-4" />
+                الرئيسية
+              </Link>
+            </Button>
+            <Button variant="ghost" size="sm" onClick={handleSignOut}>
+              <LogOut className="ms-2 h-4 w-4" />
+              تسجيل الخروج
+            </Button>
+          </div>
         </div>
       </header>
 
