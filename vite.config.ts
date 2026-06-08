@@ -1,4 +1,5 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 import { nitro } from "nitro/vite";
 
 export default defineConfig({
@@ -7,6 +8,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      TanStackRouterVite(),
       nitro({ preset: "vercel" }),
     ],
   },
